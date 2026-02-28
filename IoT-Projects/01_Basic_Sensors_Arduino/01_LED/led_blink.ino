@@ -1,9 +1,9 @@
 // LED Blinking Program
 // Author: Mahesh
 // Board: Arduino Uno
-// LED connected to Digital Pin 12
+// LED connected to Digital Pin 13
 
-int ledPin = 12;
+int ledPin = 13;
 
 void setup() {
   pinMode(ledPin, OUTPUT);
