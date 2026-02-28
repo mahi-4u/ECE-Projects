@@ -1,14 +1,17 @@
-int led=12;
-void setup() {
-  // put your setup code here, to run once:
-pinMode(12,OUTPUT);
+// LED Blinking Program
+// Author: Mahesh
+// Board: Arduino Uno
+// LED connected to Digital Pin 12
 
+int ledPin = 12;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-digitalWrite(12,HIGH);
-delay(1000);
-digitalWrite(12,LOW);
-delay(1000);
+  digitalWrite(ledPin, HIGH);   // Turn LED ON
+  delay(1000);                  // Wait 1 second
+  digitalWrite(ledPin, LOW);    // Turn LED OFF
+  delay(1000);                  // Wait 1 second
 }
