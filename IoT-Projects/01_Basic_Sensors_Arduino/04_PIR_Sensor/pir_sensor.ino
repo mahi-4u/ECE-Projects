@@ -1,15 +1,13 @@
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
-// PIR + LED setup
-const int pirPin = 5;   // PIR sensor output
-const int ledPin = 10;  // LED indicator
+const int pirPin = 5;     // PIR output pin
+const int ledPin = 10;    // LED indicator pin
 
-// LCD at address 0x27 or 0x3F (depends on module) - 16x2 display
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 int pirState = LOW;
-int lastPirState = LOW;
+int lastState = LOW;
 
 void setup() {
   pinMode(pirPin, INPUT);
@@ -17,46 +15,45 @@ void setup() {
 
   Serial.begin(9600);
 
-  lcd.init();           // Initialize the LCD
-  lcd.backlight();      // Turn ON backlight
-  
+  lcd.init();
+  lcd.backlight();
+
   lcd.setCursor(0, 0);
   lcd.print("PIR Sensor Ready");
   lcd.setCursor(0, 1);
-  lcd.print("Waiting...");
+  lcd.print("Monitoring...");
 }
 
 void loop() {
   pirState = digitalRead(pirPin);
 
-  if (pirState == HIGH && lastPirState == LOW) {
-    // Motion detected
-    digitalWrite(ledPin, HIGH);
-    Serial.println("Motion detected");
+  if (pirState != lastState) {
 
     lcd.clear();
-    lcd.setCursor(0, 0);
-    lcd.print("Motion Detected!");
-    lcd.setCursor(0, 1);
-    lcd.print("Time: ");
-    lcd.print(millis() / 1000);
-    lcd.print("s");
 
-    lastPirState = HIGH;
+    if (pirState == HIGH) {
+      digitalWrite(ledPin, HIGH);
+      Serial.println("Motion Detected!");
 
-  } else if (pirState == LOW && lastPirState == HIGH) {
-    // Motion ended
-    digitalWrite(ledPin, LOW);
-    Serial.println("No motion");
+      lcd.setCursor(0, 0);
+      lcd.print("Motion Detected!");
+      lcd.setCursor(0, 1);
+      lcd.print("Time: ");
+      lcd.print(millis() / 1000);
+      lcd.print("s");
 
-    lcd.clear();
-    lcd.setCursor(0, 0);
-    lcd.print("No Motion");
-    lcd.setCursor(0, 1);
-    lcd.print("Status OK");
+    } else {
+      digitalWrite(ledPin, LOW);
+      Serial.println("No Motion");
 
-    lastPirState = LOW;
+      lcd.setCursor(0, 0);
+      lcd.print("No Motion");
+      lcd.setCursor(0, 1);
+      lcd.print("Status Normal");
+    }
+
+    lastState = pirState;
   }
 
-  delay(500); // stabilize PIR reading
+  delay(200);
 }
