@@ -1,23 +1,40 @@
-int gasPin = A3;   // Analog pin for gas sensor
-int gasValue = 0;  // Variable to store sensor reading
+// Gas Sensor Monitoring using Arduino
+// Author: Mahesh
+// MQ Gas Sensor connected to Analog Pin A3
+
+// Pin Definitions
+const int gasPin = A3;
+
+// Variables
+int gasValue = 0;
+int threshold = 400;   // Adjust based on calibration
 
 void setup() {
-  Serial.begin(9600);   // Start serial communication
+
   pinMode(gasPin, INPUT);
+  Serial.begin(9600);
+
+  Serial.println("Gas Sensor Ready...");
 }
 
 void loop() {
-  gasValue = analogRead(gasPin);   // Read sensor value (0 - 1023)
 
+  // Read gas sensor value
+  gasValue = analogRead(gasPin);
+
+  // Display gas value
   Serial.print("Gas Sensor Value: ");
   Serial.println(gasValue);
 
-  // Simple condition to indicate HIGH gas level
-  if (gasValue > 400) {    // Threshold depends on sensor/environment
+  // Check gas level condition
+  if (gasValue > threshold) {
+
     Serial.println("Gas Leakage Detected!");
+
   } else {
+
     Serial.println("Air Quality Normal");
   }
 
-  delay(1000);  // Read every 1 second
+  delay(1000);   // Wait 1 second before next reading
 }
