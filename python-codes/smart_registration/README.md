@@ -1,20 +1,18 @@
-Smart Event Registration & Entry Validation System
+# Smart Event Registration & Entry Validation System
 
-This is a simple Python-based event registration system designed to simulate real-world event operations.
+This is a Python-based console application that simulates event registration workflow.
 
-Features:
-- Participant registration
+## Features
 - Email validation
-- Duplicate prevention
+- Duplicate registration prevention
 - Unique participant ID generation
-- File-based data storage
-- Admin view and search functionality
+- CSV-based structured storage
+- Search functionality
 
-Purpose:
-This project demonstrates structured problem-solving, data validation, file handling, and operations automation concepts relevant to event-based platforms.
-
-Built using:
+## Technologies Used
 - Python
 - CSV file handling
-- UUID generation
-- Basic input validation
+- UUID module
+
+## Purpose
+This project demonstrates structured problem-solving, automation thinking, and operational workflow simulation relevant to event-based platforms.
