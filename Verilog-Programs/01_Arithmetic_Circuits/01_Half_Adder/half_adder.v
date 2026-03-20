@@ -1,3 +1,5 @@
+//Author:mahesh
+//halfadder using three models of code
 module half_add(
     input a,
     input b,
