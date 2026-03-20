@@ -1,3 +1,5 @@
+//Author:mahesh
+//fulladder using three models of code
 module fulladd(
     input a,
     input b,
