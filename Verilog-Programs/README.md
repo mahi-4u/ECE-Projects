@@ -2,41 +2,40 @@
 
 This repository contains Verilog HDL programs implemented as part of digital design and FPGA lab practice.
 
-The repository is organized in a structured way from basic combinational circuits to sequential circuits, finite state machines, and design-based applications.
+The repository is organized in a structured way from basic combinational circuits to sequential circuits, finite state machines, and application-based designs.
 
 It includes:
 
-- Basic arithmetic circuits
+- Arithmetic circuits
 - Code converters
 - Multiplexers and demultiplexers
 - Encoders and decoders
 - Flip-flops and shift registers
 - Counters
 - Sequence detectors
-- FSM-based designs
+- Serial adder designs
+- Parity detector
+- Traffic light controller
+- Vending machine design
 - Term project implementations
 
-The purpose of this repository is to document Verilog practice programs clearly with code, explanation, and experiment-wise organization so that it can help both learning and revision.
+The purpose of this repository is to document Verilog practice programs clearly with code, explanation, and experiment-wise organization for learning, revision, and reference.
 
 ## Repository Structure
 
-The repository is divided into folders based on experiment groups:
+- `01_Arithmetic_Circuits`
+- `02_Combinational_Building_Blocks`
+- `03_Sequential_Circuits`
+- `04_FSM_Designs`
+- `05_Application_Based_Designs`
+- `06_Term_Project`
 
-- `01_Introduction_and_Tools`
-- `02_Arithmetic_Circuits`
-- `03_Combinational_Building_Blocks`
-- `04_Sequential_Circuits`
-- `05_FSM_Designs`
-- `06_Application_Based_Designs`
-- `07_Term_Project`
-- `08_Documentation_Resources`
-
-Each folder contains individual Verilog programs with proper naming and descriptions.
+Each folder contains Verilog programs arranged topic-wise with proper documentation.
 
 ## Tools Used
 
 - Verilog HDL
-- Xilinx / Vivado
+- Xilinx / Vivado / ModelSim
 
 ## Author
 
