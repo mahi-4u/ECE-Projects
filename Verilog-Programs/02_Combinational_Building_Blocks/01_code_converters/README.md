@@ -1,1 +1,1 @@
-
+This folder contains Verilog designs for code conversion circuits such as Binary to BCD, Binary to Gray, and BCD to Excess-3. These circuits are used to convert data from one binary-coded format to another.
