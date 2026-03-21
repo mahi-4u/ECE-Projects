@@ -7,7 +7,7 @@ output [3:0]E
 /*GATE LEVEL MODELLING
 wire Bn0,Bn1,Bn2,Bn3;
 wire [9:1]t;
-not (Bno,B[0]);
+not (Bn0,B[0]);
 not (Bn1,B[1]);
 not (Bn2,B[2]);
 not (Bn3,B[3]);
