@@ -1,7 +1,8 @@
-# 05_Application_Based_Designs
+# 05_Application_Based_Designs:
 
 This folder contains '_Application_Based_Designs'
-These are usually:
+
+*These are usually:
 
 small to medium practical systems
 focused on one problem
