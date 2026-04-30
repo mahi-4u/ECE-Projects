@@ -9,6 +9,7 @@ siso_register uut(clk, clr, sin, sout);
 always #5 clk = ~clk;
 
 initial begin
+$monitor("time=%0t| clk=%0b | sin =%0b | sout=%0b",$time,clk,sin,sout);
     clk = 0; clr = 1; sin = 0;
     #10 clr = 0;
 
