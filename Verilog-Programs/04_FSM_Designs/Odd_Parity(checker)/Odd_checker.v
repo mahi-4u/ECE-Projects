@@ -20,11 +20,11 @@ end
 always @(*) begin
     case (ps)
         EVEN: begin
-            z  = (x == 1) ? 1 : 0;   // flipped
+            z  = (x == 1) ? 1 : 0; 
             ns = (x == 1) ? ODD : EVEN;
         end
         ODD: begin
-            z  = (x == 0) ? 1 : 0;   // flipped
+            z  = (x == 0) ? 1 : 0;   
             ns = (x == 1) ? EVEN : ODD;
         end
         default: begin
