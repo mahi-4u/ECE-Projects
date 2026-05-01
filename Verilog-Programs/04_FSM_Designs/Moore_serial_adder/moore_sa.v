@@ -18,7 +18,7 @@ begin
         ps <= ns;
 end
 
-// Next-state logic (FIXED)
+// Next-state logic
 always @(*)
 begin
     case (ps)
@@ -44,7 +44,7 @@ begin
     endcase
 end
 
-// Output logic (same as yours)
+// Output logic
 always @(*)
 begin
     case(ps)
