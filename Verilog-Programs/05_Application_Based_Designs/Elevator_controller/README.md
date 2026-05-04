@@ -8,8 +8,8 @@ This project implements a basic elevator controller using Verilog HDL. The desig
 
 ## Project Structure
 
-* version_1.v : Basic elevator controller (single request)
-* version_2.v : Enhanced controller (multiple requests)
+* elevator_1.v : Basic elevator controller (single request)
+* elevator_2.v : Enhanced controller (multiple requests)
 
 ---
 
