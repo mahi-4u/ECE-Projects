@@ -79,13 +79,13 @@ UP and DOWN instead of a single MOVE state
 
 ## Comparison
 
-## Feature                Version 1    Version 2
-
-Single request        Yes          Yes
-Multiple requests     No           Yes
-Request memory        No           Yes
-FSM states            3            4
-Direction handling    Basic        Improved
+| Feature            | Version 1 | Version 2 |
+| ------------------ | --------- | --------- |
+| Single request     | Yes       | Yes       |
+| Multiple requests  | No        | Yes       |
+| Request memory     | No        | Yes       |
+| FSM states         | 3         | 4         |
+| Direction handling | Basic     | Improved  |
 
 ---
 
@@ -119,4 +119,3 @@ Direction handling    Basic        Improved
 ## Author
 
 Mahesh
-
