@@ -17,13 +17,19 @@ Compared to languages like C, C++, and Java, Python is easier because:
 ### Example
 
 #### C Program
+```c
 #include <stdio.h>
 int main() {
     printf("Hello World");
     return 0;
 }
+```
+
 #### Python Program
+```python
 print("Hello World")
+```
+
 ---
 
 ## Features of Python
@@ -44,16 +50,23 @@ print("Hello World")
 Download from: https://www.python.org
 
 ### 2. Create a File
-Create a file named basics.py
+Create a file named `basics.py`
 
 ### 3. Write Code
+```python
 print("Hello World")
+```
+
 ### 4. Run the Program
+```bash
 python basics.py
+```
+
 or
 
 ```bash
 python3 basics.py
+```
 
 ---
 
@@ -62,16 +75,26 @@ python3 basics.py
 Comments are used to explain code. Python ignores comments during execution.
 
 ### Single-Line Comment
-python
+```python
 # This is a comment
 print("Hello")
+```
+```
+
+### Multiple Single-Line Comments
+```python
+# Line 1
+# Line 2
+# Line 3
+```
 
 ### Multi-Line String (Used as Comment)
-python
+```python
 """
 This is a multi-line comment.
 Used to explain code.
 """
+```
 
 ## Topics Covered in `basics.py`
 
@@ -83,15 +106,17 @@ Used to explain code.
 ---
 
 ## Hello World
-python
+```python
 print("Hello, World!")
+```
 
 ---
 
 ## Input and Output
-python
+```python
 name = input("Enter your name: ")
 print("Hello", name)
+```
 
 ---
 
@@ -134,12 +159,13 @@ print("Hello", name)
 
 Type conversion changes one data type into another.
 
-python
+```python
 num = "25"
 
 x = int(num)      # String to integer
 y = float(num)    # String to float
 z = str(x)        # Integer to string
+```
 
 ### Common Conversion Functions
 
@@ -165,11 +191,11 @@ z = str(x)        # Integer to string
 
 ## Check Data Type
 
-python
+```python
 x = 10
 print(type(x))   # <class 'int'>
+```
 
----
 ## Learning Outcome
 
 After completing this folder, you will understand:
@@ -181,4 +207,5 @@ After completing this folder, you will understand:
 - How operators work
 - How type conversion works
 - How to check data types
-#Author: mahesh
+```
+## Author:mahesh
