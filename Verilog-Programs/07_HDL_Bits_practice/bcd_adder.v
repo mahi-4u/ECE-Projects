@@ -1,3 +1,4 @@
+//Author:mahesh
 /*
 ===============================================================================
 HDLBits: Single-Digit BCD Adder (4-Bit BCD Adder)
